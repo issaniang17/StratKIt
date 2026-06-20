@@ -5,8 +5,8 @@ import { Plus } from "lucide-react"
 
 const Portfolio = () => {
     const [card, setCard] = useState(All)
-    const handleClick = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>)=>{
-          const valeur =event.target.value
+    const handleClick = (event: React.MouseEvent<HTMLButtonElement>)=>{
+          const valeur =event.currentTarget.value
           if(valeur === 'Development'){
             setCard(Development)
           }else if(valeur === 'Markrting'){
