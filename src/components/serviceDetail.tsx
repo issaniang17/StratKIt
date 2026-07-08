@@ -12,7 +12,7 @@ const ServiceDetail = () => {
     }
 
   return (
-    <div className="flex flex-col px-4 md:px-12 md:flex-row gap-8 w-full md:justify-center md:items-center h-full bg-gray-300" key={service.id}>
+    <div className="flex flex-col px-4 md:px-12 md:flex-row gap-8 w-full md:justify-center md:items-center h-screen bg-gray-300" key={service.id}>
         <div className="w-full md:w-1/2 flex justify-center mb-2 md:mb-8 py-8">
             <img src={service.icon} alt={service.title} className="md:size-40" />
         </div>
