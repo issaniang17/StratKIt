@@ -1,6 +1,12 @@
 
-export type marketingProps = string[]
-export type developmentProps = string[]
-export type optimizationProps = string[]
-export type integrationProps = string[]
-export type allProps = string[]
+type propsPortofolio = {
+    img:string;
+    nom:string
+}
+export type portoServiceProps = {
+  marketing: propsPortofolio[],
+  development: propsPortofolio[],
+  optimization: propsPortofolio[],
+ integration: propsPortofolio[]
+ all: propsPortofolio[]
+};

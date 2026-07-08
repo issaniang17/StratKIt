@@ -15,7 +15,7 @@ import portfolio6 from "../assets/portfolio/portfolio6.png"
 import portfolio7 from "../assets/portfolio/portfolio7.png"
 import portfolio8 from "../assets/portfolio/portfolio8.png"
 import portfolio9 from "../assets/portfolio/portfolio9.png"
-import type { allProps, developmentProps, integrationProps, marketingProps, optimizationProps } from "../type/Portfolio";
+import type {  portoServiceProps } from "../type/Portfolio";
 import type { ResultProps } from "../type/Result";
 import type { TeamProps } from "../type/Team";
 import team1 from "../assets/teams/team1.jpg"
@@ -36,27 +36,39 @@ import { FaPhone } from "react-icons/fa";
 
 
 export const ServiceCard : ServiceProps[] =[
-    {icon:service1,
+    {
+        id:1,
+        icon:service1,
         title:"Optimization",
         description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, suscipit?"
     },
-    {icon:service2,
+    {
+        id:2,
+        icon:service2,
         title:"Market Analysis",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, suscipit?"
     },
-    {icon:service3,
+    {
+        id:3,
+        icon:service3,
         title:"Concept & Idea",
         description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, suscipit?"
     },
-   {icon:service4,
+   {
+        id:4,
+        icon:service4,
         title:"Development",
         description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, suscipit?"
     },
-    {icon:service5,
+    {
+        id:5,
+        icon:service5,
         title:"Integration",
         description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, suscipit?"
     },
-    {icon:service6,
+    {
+        id:6,
+        icon:service6,
         title:"Support",
         description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, suscipit?"
     }
@@ -94,11 +106,98 @@ export const portfolioOptions = [
 ]
 
 
-export const Markrting:marketingProps = [portfolio1, portfolio2]
-export const Development:developmentProps = [portfolio3, portfolio4]
-export const Optimization:optimizationProps = [portfolio5, portfolio6]
-export const Integration:integrationProps = [portfolio7, portfolio8, portfolio9]
-export const All:allProps = [portfolio1, portfolio2, portfolio3, portfolio4, portfolio5, portfolio6,portfolio7, portfolio8, portfolio9]
+export const servicePortfolio: portoServiceProps ={
+    
+        marketing:[
+            {
+                img:portfolio1,
+                nom:"porto1"
+            },
+            {
+                img:portfolio2,
+                nom:"porto2"
+            }
+        
+        ],    
+        development:[
+            {
+                img:portfolio3,
+                nom:"porto3"
+            },
+            {
+                img:portfolio4,
+                nom:"porto4"
+            }
+        ],
+    
+        
+        optimization:[
+            {
+                img:portfolio5,
+                nom:"porto5"
+            },
+            {
+                img:portfolio6,
+                nom:"porto6"
+            }
+        ],
+    
+        
+        integration:[
+            {
+                img:portfolio7,
+                nom:"porto7"
+            },
+            {
+                img:portfolio8,
+                nom:"porto8"
+            },
+            {
+                img:portfolio9,
+                nom:"porto9"
+            }
+        ],
+    
+        all:[
+             {
+                img:portfolio1,
+                nom:"porto1"
+            },
+            {
+                img:portfolio2,
+                nom:"porto2"
+            },
+            {
+                img:portfolio3,
+                nom:"porto3"
+            },
+            {
+                img:portfolio4,
+                nom:"porto4"
+            },
+             {
+                img:portfolio5,
+                nom:"porto5"
+            },
+            {
+                img:portfolio6,
+                nom:"porto6"
+            },
+             {
+                img:portfolio7,
+                nom:"porto7"
+            },
+            {
+                img:portfolio8,
+                nom:"porto8"
+            },
+            {
+                img:portfolio9,
+                nom:"porto9"
+            }
+        ]
+    
+}
  
 export const results : ResultProps[] = [
     {
