@@ -1,25 +1,27 @@
 import { useState } from "react"
-import { All, portfolioOptions, Markrting, Integration, Development, Optimization } from "../constantes/Constante"
+import {  portfolioOptions, servicePortfolio } from "../constantes/Constante"
 import { Plus } from "lucide-react"
 
 
 const Portfolio = () => {
-    const [card, setCard] = useState(All)
+    
+    const [card, setCard] = useState(servicePortfolio.all)
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>)=>{
           const valeur =event.currentTarget.value
           if(valeur === 'Development'){
-            setCard(Development)
+            setCard(servicePortfolio.development)
           }else if(valeur === 'Markrting'){
-            setCard(Markrting)
+            setCard(servicePortfolio.marketing)
           }else if(valeur === 'Optimization'){
-            setCard(Optimization)
+            setCard(servicePortfolio.optimization)
           }else if(valeur === 'Integration'){
-            setCard(Integration)
+            setCard(servicePortfolio.integration)
           }else if(valeur === 'All'){
-            setCard(All)
+            setCard(servicePortfolio.all)
           }
         }
    
+
    
 
   return (
@@ -32,14 +34,17 @@ const Portfolio = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
            {card.map((item, index)=>(
             <div key={index} className="relative">
-                <img src={item}alt={item}/>
-                <div className="h-full w-full flex  bg-blue-700 opacity-0  absolute top-0 justify-center items-center text-white duration-300 transition-all ease-in hover:opacity-70">
-                    <Plus />
-                </div>
+              <img src={item.img} alt={item.nom}/>
+              <div className="absolute top-0 w-full bg-blue-600 h-full flex flex-col gap-2 justify-center items-center text-white opacity-0 hover:opacity-60 duration-150 ease-in transition-opacity cursor-pointer ">
+                <Plus size={18}/>
+                <p>{item.nom}</p>
+              </div>
             </div>
            ))}
         </div>
     </div>
+        
+    
   )
 }
 
