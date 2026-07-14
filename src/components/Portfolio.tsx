@@ -8,17 +8,23 @@ const Portfolio = () => {
     const [card, setCard] = useState(servicePortfolio.all)
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>)=>{
           const valeur =event.currentTarget.value
-          if(valeur === 'Development'){
-            setCard(servicePortfolio.development)
-          }else if(valeur === 'Markrting'){
-            setCard(servicePortfolio.marketing)
-          }else if(valeur === 'Optimization'){
-            setCard(servicePortfolio.optimization)
-          }else if(valeur === 'Integration'){
-            setCard(servicePortfolio.integration)
-          }else if(valeur === 'All'){
-            setCard(servicePortfolio.all)
+          const cards = servicePortfolio.all
+          if(valeur === 'all'){
+           return  setCard(cards)
           }
+          const filterCard = cards.filter(item => item.category === valeur)
+          setCard(filterCard)
+          // if(valeur === 'Development'){
+          //   setCard(servicePortfolio.development)
+          // }else if(valeur === 'Markrting'){
+          //   setCard(servicePortfolio.marketing)
+          // }else if(valeur === 'Optimization'){
+          //   setCard(servicePortfolio.optimization)
+          // }else if(valeur === 'Integration'){
+          //   setCard(servicePortfolio.integration)
+          // }else if(valeur === 'All'){
+          //   setCard(servicePortfolio.all)
+          // }
         }
    
 
@@ -28,7 +34,7 @@ const Portfolio = () => {
     <div className="flex flex-col items-center mb-10 px-10" id="Portfolio">
         <ul className="flex gap-5 text-xl flex-wrap justify-center my-10">
             {portfolioOptions.map((item, index)=>(
-                <li key={index}><button value={item} onClick={handleClick}>{item}</button></li>
+                <li key={index}><button value={item.toLowerCase()} onClick={handleClick}>{item}</button></li>
             ))}
         </ul>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">

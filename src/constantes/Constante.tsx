@@ -108,92 +108,52 @@ export const portfolioOptions = [
 
 export const servicePortfolio: portoServiceProps ={
     
-        marketing:[
-            {
-                img:portfolio1,
-                nom:"porto1"
-            },
-            {
-                img:portfolio2,
-                nom:"porto2"
-            }
-        
-        ],    
-        development:[
-            {
-                img:portfolio3,
-                nom:"porto3"
-            },
-            {
-                img:portfolio4,
-                nom:"porto4"
-            }
-        ],
-    
-        
-        optimization:[
-            {
-                img:portfolio5,
-                nom:"porto5"
-            },
-            {
-                img:portfolio6,
-                nom:"porto6"
-            }
-        ],
-    
-        
-        integration:[
-            {
-                img:portfolio7,
-                nom:"porto7"
-            },
-            {
-                img:portfolio8,
-                nom:"porto8"
-            },
-            {
-                img:portfolio9,
-                nom:"porto9"
-            }
-        ],
     
         all:[
              {
                 img:portfolio1,
-                nom:"porto1"
+                nom:"porto1",
+                category:'marketing'
             },
             {
                 img:portfolio2,
-                nom:"porto2"
+                nom:"porto2",
+                category:'marketing'
             },
             {
                 img:portfolio3,
-                nom:"porto3"
+                nom:"porto3",
+                category:'development'
             },
             {
                 img:portfolio4,
-                nom:"porto4"
+                nom:"porto4",
+                category:'development'
             },
              {
                 img:portfolio5,
-                nom:"porto5"
+                nom:"porto5",
+                category:'optimization'
             },
             {
                 img:portfolio6,
-                nom:"porto6"
+                nom:"porto6",
+                category:'optimization'
             },
              {
                 img:portfolio7,
-                nom:"porto7"
+                nom:"porto7",
+                category:'integration'
             },
             {
                 img:portfolio8,
-                nom:"porto8"
+                nom:"porto8",
+                category:'integration'
             },
             {
                 img:portfolio9,
-                nom:"porto9"
+                nom:"porto9",
+                category:'integration'
             }
         ]
     
