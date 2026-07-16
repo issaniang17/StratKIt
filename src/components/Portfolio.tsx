@@ -1,6 +1,7 @@
 import { useState } from "react"
 import {  portfolioOptions, servicePortfolio } from "../constantes/Constante"
 import { Plus } from "lucide-react"
+import TitleSection from "./TitleSection"
 
 
 const Portfolio = () => {
@@ -31,7 +32,10 @@ const Portfolio = () => {
    
 
   return (
-    <div className="flex flex-col items-center mb-10 px-10" id="Portfolio">
+    <div className="py-36">
+      <TitleSection titre="Our Portfolio" color="text-slate-900"/>
+    
+    <div className="flex flex-col items-center mb-10 px-10 " id="Portfolio">
         <ul className="flex gap-5 text-xl flex-wrap justify-center my-10">
             {portfolioOptions.map((item, index)=>(
                 <li key={index}><button value={item.toLowerCase()} onClick={handleClick}>{item}</button></li>
@@ -49,7 +53,7 @@ const Portfolio = () => {
            ))}
         </div>
     </div>
-        
+    </div> 
     
   )
 }

@@ -14,7 +14,11 @@ const ServiceDetail = () => {
   return (
     <div className="flex flex-col px-4 md:px-12 md:flex-row gap-8 w-full md:justify-center md:items-center h-screen bg-gray-300" key={service.id}>
         <div className="w-full md:w-1/2 flex justify-center mb-2 md:mb-8 py-8">
-            <img src={service.icon} alt={service.title} className="md:size-40" />
+            {typeof service.icon === "string" ? (
+            <img src={service.icon} alt={service.title} className="my-4" />
+          ) : (
+            <div className="my-4 text-green-500 font-semibold">{service.icon}</div>
+          )}
         </div>
         <div className="w-full md:w-1/2 space-y-3 py-10">
             <h2 className="font-bold capitalize md:text-4xl">{service.title}</h2>

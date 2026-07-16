@@ -2,8 +2,8 @@ import { useEffect, useState } from "react"
 import { Menu, X } from "lucide-react"
 import { navLinks } from "../constantes/Constante"
 import logo from '../assets/head/logo.png'
-
-import {animateScroll, Link} from 'react-scroll'
+import {Link} from "react-router-dom"
+import {animateScroll} from 'react-scroll'
 
 
 function Navbar() {
@@ -28,14 +28,16 @@ function Navbar() {
   return (
     <nav className={`px-8 py-6 flex justify-between w-full  text-white  fixed top-0 z-50 mb-10 items-center  ${pos ?  'bg-slate-900' : "bg-transparent"} `} >
         <div>
-            <Link onClick={animateScroll.scrollToTop} to="/" spy={true} smooth={true} duration={500}>
+            <Link onClick={animateScroll.scrollToTop} to="/">
                <img src={logo} alt="logo" className="shrink-0 cursor-pointer"/>
             </Link>
         </div>
         <div>
              <ul className="gap-8 hidden lg:flex font-normal">
                         {navLinks.map((link, index)=>(
-                            <li key={index} className="hover:text-green-400 transition-colors duration-300 ease-in cursor-pointer"><Link to={link} spy={true} smooth={true} duration={500} offset={-180}>{link}</Link></li>
+                            <li key={index} className="hover:text-green-400 transition-colors duration-300 ease-in cursor-pointer">
+                                {link === 'Services' || link === 'Contact' ? <Link to={`/${link}`}  >{link}</Link> : <a href={`#${link}`}  >{link}</a>}
+                            </li>
                         ))}
                 </ul>
             <Menu onClick={openMenu} className="lg:hidden"/>
@@ -47,7 +49,7 @@ function Navbar() {
                     <ul className="flex flex-col gap-5 mt-20 ml-5">
                         {navLinks.map((link, index)=>(
                             <li key={index} className="hover:text-green-400 transition-colors duration-300 ease-in">
-                                <Link to={link} spy={true} smooth={true} duration={500} offset={-180}>
+                                <Link to={link}>
                                     {link}
                                 </Link>
                             </li>

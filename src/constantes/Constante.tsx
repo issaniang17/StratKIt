@@ -25,7 +25,7 @@ import team4 from "../assets/teams/team4.jpg"
 import { FaFacebookF,   FaInstagram, FaBasketballBall, FaYoutube } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import type { checkListProps, priceItemsProps } from "../type/PriceItem";
-import { Check } from "lucide-react";
+import { Bell, CalendarDays, Check, Handshake, Link, Shield, Zap } from "lucide-react";
 import type { TestimonialsProps } from "../type/Testimonials";
 import author1 from "../assets/testimonials/author1.jpg"
 import author2 from "../assets/testimonials/author2.jpg"
@@ -70,6 +70,42 @@ export const ServiceCard : ServiceProps[] =[
         id:6,
         icon:service6,
         title:"Support",
+        description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, suscipit?"
+    },
+    {
+        id:7,
+        icon:<Zap size={35}/>,
+        title:"Fast product",
+        description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, suscipit?"
+    },
+    {
+        id:8,
+        icon:<Handshake size={35}/>,
+        title:"Negociation",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, suscipit?"
+    },
+    {
+        id:9,
+        icon:<Link size={35}/>,
+        title:"Social Link",
+        description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, suscipit?"
+    },
+   {
+        id:10,
+        icon:<Bell size={35}/>,
+        title:"Notification",
+        description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, suscipit?"
+    },
+    {
+        id:11,
+        icon:<CalendarDays size={35}/>,
+        title:"Planing",
+        description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, suscipit?"
+    },
+    {
+        id:12,
+        icon:<Shield size={35}/>,
+        title:"Confidentiality",
         description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, suscipit?"
     }
 ]

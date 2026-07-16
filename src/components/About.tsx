@@ -4,7 +4,7 @@ import founder from "../assets/about/founder.jpg"
 
 const About = () => {
   return (
-    <div className="flex flex-col lg:flex-row gap-4 mx-8 my-10"  id="About us">
+    <div className="flex flex-col lg:flex-row gap-4 mx-8 my-10 py-36"  id="About us">
         <div className="relative lg:w-[40%] mr-3">
             <img src={aboutus} alt="about" />
             <div className="w-40 h-40 flex flex-col items-center justify-center bg-green-400  text-white p-2 rounded-sm absolute bottom-2 -left-5">

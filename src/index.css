@@ -9,3 +9,11 @@
     font-weight: 500;
     font-style: normal;
 }
+html {
+    scroll-behavior: smooth;
+}
+@keyframes progress {
+    0%{
+        stroke-dasharray: 0 100;
+    }
+}

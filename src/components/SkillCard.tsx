@@ -24,13 +24,13 @@ const SkillCard = ({percentage, title, description}: SkillsProps) => {
                     strokeLinecap="round"
                     strokeDashoffset={strokeDashoffset}
                 /> */}
-                <path d="M18 2a16 16 0 010 32 16 16 0 010-32" fill="#fff" className="animate-[progress_1s_forwards]"
+                <path d="M18 2a16 16 0 010 32 16 16 0 010-32" fill="#fff"
                 strokeLinecap="round"
                 strokeWidth='2.8'
                 stroke="#F8F8F8"
                 strokeDasharray='100'
                 />
-                <path d="M18 2a16 16 0 010 32 16 16 0 010-32" fill="#fff" className="animate-[progress_1s_forwards]"
+                <path d="M18 2a16 16 0 010 32 16 16 0 010-32" fill="#fff" className="animate-[progress_1s_forwards] [animation-timeline:view()] [animation-range:entry_0%_cover_40%]"
                 strokeLinecap="round"
                 strokeWidth='2.8'
                 stroke="#5BC86D"
