@@ -1,9 +1,12 @@
 import { teams } from "../constantes/Constante"
+import TitleSection from "./TitleSection"
 
 
 const Teams = () => {
   return (
-    <div className="lg:grid-cols-4 lg:grid gap-2 lg:px-4 px-2 flex overflow-x-auto scroll-smooth  scrollbar-none snap-x snap-mandatory [scroll-marker-group:after] lg:[&::scroll-marker-group]:hidden [&::scroll-marker-group]:flex  [&::scroll-marker-group]:justify-center  [&::scroll-marker-group]:gap-2  [&::scroll-marker-group]:mt-2 [&::scroll-marker-group]:p-2 my-10" id="Team">
+    <div className="py-36" id="Team">
+        <TitleSection titre='Our Team' color="text-slate-900"/>
+    <div className="lg:grid-cols-4 lg:grid gap-2 lg:px-4 px-2 flex overflow-x-auto scroll-smooth  scrollbar-none snap-x snap-mandatory [scroll-marker-group:after] lg:[&::scroll-marker-group]:hidden [&::scroll-marker-group]:flex  [&::scroll-marker-group]:justify-center  [&::scroll-marker-group]:gap-2  [&::scroll-marker-group]:mt-2 [&::scroll-marker-group]:p-2 my-10 " >
         {teams.map((item, index)=>(
             <div key={index} className={`relative mt-10 shrink-0  w-full md:w-1/2 lg:w-full  snap-center md:snap-start [&::scroll-marker]:content-['']  [&::scroll-marker]:bg-gray-300 [&::scroll-marker]:rounded-full [&::scroll-marker]:w-3 [&::scroll-marker]:h-3 [&::scroll-marker:target-current]:bg-gray-400 [&::scroll-marker]:cursor-pointer ${index % 2 !== 0 && 'md:[&::scroll-marker]:content-none'}`}>
                 <img src={item.image} alt={item.nom} className="rounded-t-lg w-full"/>
@@ -24,6 +27,7 @@ const Teams = () => {
                 </div>
             </div>
         ))}
+    </div>
     </div>
   )
 }
