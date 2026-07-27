@@ -4,7 +4,7 @@ import LoginBg from "../components/logIn_bg/loginBg";
 
 const LoginPage = () => {
   return (
-    <div className="flex justify-center items-center bg-gray-500 md:h-screen absolute w-full z-3000">
+    <div className="flex justify-center items-center bg-gray-500  absolute w-full z-3000 h-screen">
       <div className="flex px-4 py-2 gap-8 bg-black/60 w-full md:w-[90%] md:h-[90%] md:rounded-2xl h-full rounded-none">
         <div className="hidden md:block md:w-1/2 p-4">
           <LoginBg />
