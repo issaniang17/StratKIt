@@ -1,3 +1,5 @@
+import FormContact from "../components/forms/formContact"
+import SubcribeForm from "../components/forms/subcribeForm"
 import { ContactElement } from "../constantes/Constante"
 
 
@@ -12,12 +14,7 @@ const ContactPage = () => {
             <div className="order-1 md:order-2 rounded-2xl bg-gray-200 p-8">
                 <h2 className="text-2xl font-light tracking-tight">Drop us a message</h2>
                 <p className="opacity-80 font-light text-lg">We're always here to assist you at Etec. Our customer <br /> support team is dedicated to addressing your inquiries.</p>
-                <form action="#" className="space-y-5 my-5">
-                    <input type="text" placeholder="Name" className="rounded-full p-4 bg-white w-full md:w-[48%] outline-0 md:mr-2"/>
-                    <input type="email" placeholder="Email" className="rounded-full p-4 bg-white w-full md:w-[48%] outline-0 md:ml-2"/>
-                    <textarea name="message" id="message" placeholder="Message" className="bg-white p-8 w-full md:h-80 h-40 rounded-2xl outline-0 "></textarea>
-                    <input type="submit" value="Send Message"   className="w-full bg-slate-900 text-white p-3 inline-flex justify-center items-center rounded-full "/>
-                </form>
+                <FormContact />
             </div>
             <div className="order-2 md:order-1 space-y-4 md:w-[40%]">
                 <div className="flex flex-col justify-between py-5 rounded-2xl bg-gray-200 px-8 md:h-[49%]">
@@ -50,10 +47,7 @@ const ContactPage = () => {
             <h2 className="font-normal text-2xl md:text-3xl">Subscribe to our email</h2>
             <p className="font-normal text-2xl md:text-3xl">newsletter and get 15% off</p>
             <p className="font-light text-sm">Be the first to know about the latest in tech trends, exclusive offers, and exciting product launches by subscribing to our newsletter.</p>
-            <form action="#" className="w-full flex flex-col my-4 items-center justify-center md:flex-row gap-4 md:gap-6">
-                <input type="email" name="email" id="email" className="p-4 bg-white rounded-full outline-0 md:w-[50%] w-full" placeholder="Your email address" />
-                <input type="submit" value="Subscribe"  className="inline-flex justify-center items-center p-4 rounded-full text-white bg-slate-900 w-full md:w-[15%]"/>
-            </form>
+            <SubcribeForm/>
         </div>
     </div>
   )

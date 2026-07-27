@@ -43,7 +43,7 @@ function Navbar() {
               key={index}
               className="hover:text-green-400 transition-colors duration-300 ease-in cursor-pointer"
             >
-              {link === "Services" || link === "Contact" ? (
+              {link === "Services" || link === "Contact" || link === "Log in" || link === "Sign up" ? (
                 <Link to={`/${link}`}>{link}</Link>
               ) : link === "Home" ? (
                 <Link to="/">{link}</Link>
