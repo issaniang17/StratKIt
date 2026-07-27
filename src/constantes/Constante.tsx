@@ -134,7 +134,7 @@ export const skillsCard: SkillsProps[] =[
 ]
 
 export const navLinks : string[] =[
-    'Home', 'About us', 'Services','Portfolio', 'Team', 'Pricing', 'Contact'
+    'Home', 'About us', 'Services','Portfolio', 'Team', 'Pricing', 'Contact', 'Log in', 'Sign up'
 ]
 
 export const portfolioOptions = [
