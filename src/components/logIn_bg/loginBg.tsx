@@ -20,7 +20,7 @@ const LoginBg = () => {
     let compteur = 0
     const intervalId = setInterval(() => {
         compteur++
-        console.log('mount')
+
       setBgImg(prev => (prev + 1) % listBg.length);
       
       if(compteur === 5){
