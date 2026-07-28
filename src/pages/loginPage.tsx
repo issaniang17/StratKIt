@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import LogInForm from "../components/forms/loginFom";
 import LoginBg from "../components/logIn_bg/loginBg";
+import { ArrowRight } from "lucide-react";
 
 const LoginPage = () => {
   return (
@@ -23,6 +24,12 @@ const LoginPage = () => {
           </div>
           <LogInForm />
         </div>
+      </div>
+      <div className="flex gap-2 items-center md:hidden justify-center bg-white/60 py-1 px-2 rounded-full text-xs absolute top-5 right-2">
+        <Link to="/">Back to website </Link>
+        <span>
+          <ArrowRight size={12} />
+        </span>
       </div>
     </div>
   );
