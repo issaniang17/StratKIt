@@ -19,8 +19,8 @@ function App() {
         <Route path="/Services" element={<Services />} />
         <Route path="/Services/:id" element={<ServiceDetail />} />
         <Route path="/Contact" element={<ContactPage />} />
-        <Route path="/Sign up" element={<SignIn/>} />
-        <Route path="/Log in" element={<LoginPage/>} />
+        <Route path="/Sign_up" element={<SignIn/>} />
+        <Route path="/Log_in" element={<LoginPage/>} />
       </Routes>
 
       <Toaster richColors position="bottom-right" />
