@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import SignInForm from "../components/forms/signinForm";
 import LoginBg from "../components/logIn_bg/loginBg";
+import { ArrowRight } from "lucide-react";
 
 const SignIn = () => {
   return (
-    <div className="flex justify-center items-center bg-gray-500 md:h-screen absolute w-full z-3000">
+    <div className="flex justify-center w-full items-center bg-gray-500 h-screen absolute  z-3000">
       <div className="flex px-4 py-2 gap-8 bg-black/60 w-full md:w-[90%] md:h-[90%] md:rounded-2xl h-full rounded-none">
         <div className="hidden md:block md:w-1/2 p-4">
           <LoginBg />
@@ -23,6 +24,12 @@ const SignIn = () => {
           </div>
           <SignInForm />
         </div>
+      </div>
+      <div className="flex gap-2 items-center md:hidden justify-center bg-white/60 py-1 px-2 rounded-full text-xs absolute top-5 right-2">
+        <Link to="/">Back to website </Link>
+        <span>
+          <ArrowRight size={12} />
+        </span>
       </div>
     </div>
   );
