@@ -9,9 +9,7 @@ import Skills from "../components/Skills"
 import Teams from "../components/Teams"
 import Testimonials from "../components/Testimonials"
 import TitleSection from "../components/TitleSection"
-import Localisation from "../components/Localisation"
-import Footer from "../components/Footer"
-import Contact from "../components/Contact"
+
 
 
 const Home = () => {
@@ -49,14 +47,8 @@ const Home = () => {
         <TitleSection titre="Testimonials" color="text-slate-900"/>
         <Testimonials />
       </section>
-      <section  className=" bg-slate-900" >
-        
-        <Contact />
-      </section>
-      <section>
-        <Localisation />
-      </section>
-      <Footer />
+      
+      
     </div>
   )
 }

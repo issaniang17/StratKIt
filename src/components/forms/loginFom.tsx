@@ -1,6 +1,8 @@
 import { Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "sonner";
+import { storedAccountValue } from "../../constantes/Constante";
 
 type LoginForm = {
   email: string;
@@ -11,6 +13,7 @@ type passwordView = {
   viewPassword: boolean;
 };
 const LogInForm = () => {
+    const navigate = useNavigate()
   const [formLogIn, setFormLogIn] = useState<LoginForm>({
     email: "",
     password: "",
@@ -48,13 +51,12 @@ const LogInForm = () => {
       toast.error("Veiller remplir tous les champs svp");
       return;
     }
-    const storedValue = localStorage.getItem("Sign-In-Form");
-    console.log(storedValue);
-    if (!storedValue) {
+    
+    if (!storedAccountValue) {
       toast.error("Aucune donnee enregistree");
       return;
     }
-    const savedForm = JSON.parse(storedValue);
+    const savedForm = JSON.parse(storedAccountValue);
     if (
       savedForm.formSignIn.password !== formLogIn.password ||
       savedForm.formSignIn.email !== formLogIn.email
@@ -68,44 +70,54 @@ const LogInForm = () => {
       email: "",
       password: "",
     });
+    navigate('/dashboard')
   };
   return (
-    <form className="flex flex-col gap-5 mt-5 w-full" onSubmit={handleSubmit}>
-      <input
-        name="email"
-        value={formLogIn.email}
-        onChange={handleChange}
-        type="email"
-        placeholder="Email"
-        className="p-2 rounded-lg bg-gray-600  focus:outline outline-purple-400"
-      />
-      <div className="relative">
+    <div>
+      <h2 className="font-semibold text-2xl md:text-4xl ">Log in your space</h2>
+      <p className="font-light text-sm opacity-70">
+        No account?{" "}
+        <Link to="/auth/sign-up" className="underline text-blue-500">
+          Subscribe
+        </Link>
+      </p>
+      <form className="flex flex-col gap-5 mt-5 w-full" onSubmit={handleSubmit}>
         <input
-          type={clearPassword.hidePassword}
-          name="password"
-          value={formLogIn.password}
+          name="email"
+          value={formLogIn.email}
           onChange={handleChange}
-          placeholder="Enter your password"
-          className="p-2 rounded-lg bg-gray-600 focus:outline outline-purple-400 w-full "
+          type="email"
+          placeholder="Email"
+          className="p-2 rounded-lg bg-gray-600  focus:outline outline-purple-400"
         />
-        {clearPassword.viewPassword ? (
-          <Eye
-            size={22}
-            className="absolute right-1 top-[25%] opacity-60"
-            onClick={handleChangePasswordView}
+        <div className="relative">
+          <input
+            type={clearPassword.hidePassword}
+            name="password"
+            value={formLogIn.password}
+            onChange={handleChange}
+            placeholder="Enter your password"
+            className="p-2 rounded-lg bg-gray-600 focus:outline outline-purple-400 w-full "
           />
-        ) : (
-          <EyeOff
-            className="absolute right-1 top-[25%] opacity-60"
-            onClick={handleChangePasswordView}
-          />
-        )}
-      </div>
+          {clearPassword.viewPassword ? (
+            <Eye
+              size={22}
+              className="absolute right-1 top-[25%] opacity-60"
+              onClick={handleChangePasswordView}
+            />
+          ) : (
+            <EyeOff
+              className="absolute right-1 top-[25%] opacity-60"
+              onClick={handleChangePasswordView}
+            />
+          )}
+        </div>
 
-      <button className="bg-purple-400/60 p-2 rounded-lg cursor-pointer">
-        Login
-      </button>
-    </form>
+        <button className="bg-purple-400/60 p-2 rounded-lg cursor-pointer">
+          Login
+        </button>
+      </form>
+    </div>
   );
 };
 
