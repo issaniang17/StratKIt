@@ -447,7 +447,7 @@ export const ContactElement: ContactProps = {
 
 // localStorage
 
-export const storedAccountValue = localStorage.getItem("Sign-In-Form");
+
 
 // Card items analytics
 export const cardItem: cardProps[] = [
