@@ -1,5 +1,4 @@
 import { Outlet } from "react-router-dom";
-import {storedAccountValue } from "../constantes/Constante";
 import { useState } from "react";
 import { Menu, Moon, Sun, User, X } from "lucide-react";
 import { toast } from "sonner";
@@ -11,6 +10,7 @@ const DashboardLayout = () => {
     setDarkMode(!darkMode);
   };
   const [mobileView, setMobileView] = useState(false)
+  const storedAccountValue = localStorage.getItem("Sign-In-Form");
   if(!storedAccountValue){
     toast.error('No account')
     return

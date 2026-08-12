@@ -2,7 +2,7 @@ import { Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "sonner";
-import { storedAccountValue } from "../../constantes/Constante";
+
 
 type LoginForm = {
   email: string;
@@ -51,7 +51,7 @@ const LogInForm = () => {
       toast.error("Veiller remplir tous les champs svp");
       return;
     }
-    
+    const storedAccountValue = localStorage.getItem("Sign-In-Form");
     if (!storedAccountValue) {
       toast.error("Aucune donnee enregistree");
       return;
